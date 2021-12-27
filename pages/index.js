@@ -49,8 +49,8 @@ export default function Home({ propertyForSale, propertyForRent }) {
         buttonText="Explore Buying"
         linkName="/search?purpose=for-sale"
         imageUrl="https://image.freepik.com/free-photo/front-door-house_181624-8916.jpg" />
-
-      {propertyForSale.map((property) => <Property property={property} key={property.id} />)}
+      <Flex flexWrap="wrap">
+        {propertyForSale.map((property) => <Property property={property} key={property.id} />)}</Flex>
     </Box>
   )
 }
